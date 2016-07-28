@@ -1,0 +1,22 @@
+/*Created by Elana Kopelevich*/
+
+body {
+  /*background-color: blue;*/
+}
+
+.record {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.label {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: red;
+}
