@@ -14,3 +14,24 @@
 //"The quick brown fox jumps over the lazy dog and the sleeping cat early in the day."
 //
 //[Source](https://www.reddit.com/r/dailyprogrammer/comments/2mkh5g/weekly_17_mini_challenges/cm51y55)
+
+var sentence = prompt("Please enter a text to count", "Enter text here...");
+
+function countString(string) {
+    var results = {}
+    string = string.toLowerCase();
+    string = string.replace(/[\s\d]|[^a-zA-Z]/g, "");
+
+    //string = string.replace(/^a-zA-Z/, "");
+    console.log(string);
+    for (var i = 0; i < string.length; i++) {
+        if (results[string[i]]) {
+            results[string[i]]++;
+        } else {
+            results[string[i]] = 1;
+        }
+    }
+    return results;
+}
+
+console.log(countString(sentence));
