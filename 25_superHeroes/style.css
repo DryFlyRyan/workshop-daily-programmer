@@ -1,0 +1,82 @@
+body,
+main {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Ubuntu", Arial, sans-serif;
+}
+
+h1 {
+  letter-spacing: 5px;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col-squish {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sm-div,
+.pf-div {
+  height: 95%;
+  width: 49.5%;
+}
+
+.sm-div {
+  background: #1368B2;
+}
+
+.pf-div {
+  background: #D32A21;
+}
+
+.top-spacer {
+  height: 15%;
+  width: 100%;
+}
+
+.line-container {
+  height: 60%;
+  width: 100%;
+}
+
+.text-container {
+  height: 25%;
+  width: 100%;
+  color: #F0C318
+}
+
+.sm-line,
+.pf-line {
+  width: 12.5px;
+}
+
+.sm-line {
+  transform: rotate(45deg);
+  height: 500px;
+  background: linear-gradient(to bottom, rgba(208,44,35,1), rgba(208,44,35,0));
+}
+
+.pf-line {
+  height: 380px;
+  background: white;
+
+}
+
+.pulp {
+  margin-right: 1%;
+}

@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.top-circle {
+  background: green;
+  border-radius: 50%;
+  width: 750px;
+  height: 750px;
+  position: relative;
+  opacity: .75;
+}
+
+.top-circle-hole {
+  background: white;
+  width: 375px;
+  height: 375px;
+  left: 187.5px;
+  top: 187.5px;
+  border-radius: 50%;
+  position: absolute;
+  opacity: .5;
+}

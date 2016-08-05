@@ -1,0 +1,58 @@
+body {
+  background: url(http://www.bokmerk.com/site/splashback/$FILE/RAL%209010_structuur_72dpi%20sRGB.jpg) repeat;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+.big-circle {
+  width: 700px;
+  height: 700px;
+  background: url(http://41.media.tumblr.com/79968e4f937d6333696327528984bd93/tumblr_mo8bmm223s1rirnzso1_400.jpg) repeat;
+  -webkit-transform-rotate: 360deg;
+  -webkit-animation-duration: infinite;
+}
+
+.middle-circle {
+  width: 230px;
+  height: 230px;
+  background: url(http://wallpapercave.com/wp/4qqN8Hv.jpg);
+  background-size: contain;
+}
+
+.small-circle {
+  width: 30px;
+  height: 30px;
+  background: url(http://www.bokmerk.com/site/splashback/$FILE/RAL%209010_structuur_72dpi%20sRGB.jpg);
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.left-text {
+  float: left;
+}
+
+.right-text {
+  float: right;
+}
+.text {
+  width: 700px;
+}
