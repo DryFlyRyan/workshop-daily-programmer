@@ -15,7 +15,7 @@
 //3. Loop through the numbers.
 //4. if +1 = up, if -1 = down, if == even
 
-console.log('Up Down');
+console.log('Up Down Project');
 
 var numbers = window.prompt('Enter in some Numbers!', 'enter them here...');
 
@@ -23,7 +23,10 @@ function upDown(input){
   var output = '';
   var upDownArray = [];
 
-  var splitNumbers = numbers.split('');
+  var cleanNumbers = input.replace(/\D/g, '');
+  console.log(cleanNumbers);
+
+  var splitNumbers = cleanNumbers.split('');
   console.log(splitNumbers);
 
   var numberArray = splitNumbers.map(Number);
@@ -31,18 +34,17 @@ function upDown(input){
 
   for (i=0; i<numberArray.length; i++){
     if (numberArray[i] === numberArray[i-1]){
-      output = "even";
+      output = 'even';
       upDownArray.push(output);
     } else if (numberArray[i] < numberArray[i-1]){
-      output = "down";
+      output = 'down';
       upDownArray.push(output);
     } else if (numberArray[i] > numberArray[i-1]){
-      output = "up"
+      output = 'up';
       upDownArray.push(output);
     }
   }
-console.log(upDownArray);
-return upDownArray;
+  return upDownArray;
 }
 
 console.log(upDown(numbers));
