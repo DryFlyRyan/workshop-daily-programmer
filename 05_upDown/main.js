@@ -1,33 +1,35 @@
-//# Count It
-//count the letters in a string.
+//# Up Down
+//
+//Given an array of numbers, write a program that describes whether each number was higher, lower or even to the previous number.
 //
 //## Input
-//A string - like "Hello World"
+//
+//An array of numbers (e.g [6,3,5,4,3,4,4,5])
 //
 //## Output
-//Letters and how often they show up. - d:1 e:1 h:1 l:3 o:2 r:1 w:1
 //
-//## Special
-//convert all to lowercase. Ignore whitespace and anything not a-z
-//
-//## Challenge input:
-//"The quick brown fox jumps over the lazy dog and the sleeping cat early in the day."
-//
-//[Source](https://www.reddit.com/r/dailyprogrammer/comments/2mkh5g/weekly_17_mini_challenges/cm51y55)
+//An array of up down strings (e.g. ["down","up","down","down","up","even","up"])
 
-var sentence = prompt("Please enter a text to count", "Enter text here...");
 
-function countString(string) {
-    var results = {}
-    string = string.replace(/[\s\d]|[^a-zA-Z]/g, "").toLowerCase();
-    for (var i = 0; i < string.length; i++) {
-        if (results[string[i]]) {
-            results[string[i]]++;
-        } else {
-            results[string[i]] = 1;
+function upDown(number) {
+    number = number.split("");
+    var upDownArr = [];
+    number.forEach(function (element, index, array) {
+        if (index != array.length - 1) {
+            if (Number(element) < Number(array[index + 1])) {
+                upDownArr.push("up");
+
+            } else if (Number(element) > Number(array[index + 1])) {
+                upDownArr.push("down");
+            } else {
+                upDownArr.push("even");
+            }
         }
-    }
-    return results;
+    });
+
+    return upDownArr;
 }
 
-console.log(countString(sentence));
+var number = prompt("Please enter a number.", "enter number here...");
+
+console.log(upDown(number));
