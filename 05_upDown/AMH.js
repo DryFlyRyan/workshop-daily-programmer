@@ -2,7 +2,7 @@
 // Daily Programmer 05 - Up Down
 ////////////////////////////////////////////
 
-inputArray = [1,5,7,3,4,9,1,0];
+inputArray = [1,1,5,7,3,4,9,1,0];
 upDownArray = [];
 
 
