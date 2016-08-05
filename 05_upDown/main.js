@@ -16,11 +16,11 @@ function upDown(number) {
     var upDownArr = [];
     number.forEach(function (element, index, array) {
         if (index != array.length - 1) {
-            if (Number(element) < Number(array[index + 1])) {
-                upDownArr.push("up");
-
-            } else if (Number(element) > Number(array[index + 1])) {
+            if (Number(element) > Number(array[index + 1])) {
                 upDownArr.push("down");
+
+            } else if (Number(element) < Number(array[index + 1])) {
+                upDownArr.push("up");
             } else {
                 upDownArr.push("even");
             }
@@ -30,6 +30,6 @@ function upDown(number) {
     return upDownArr;
 }
 
-var number = prompt("Please enter a number.", "enter number here...");
+var number = prompt("Please enter a number.");
 
 console.log(upDown(number));
