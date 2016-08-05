@@ -7,7 +7,7 @@ function rampNumberCheck(number) {
             isRampNumber = false;
         }
     }
-    return isRampNumber
+    return isRampNumber;
 }
 
 var number = prompt("Please enter number");
