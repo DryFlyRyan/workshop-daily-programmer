@@ -11,27 +11,24 @@
 // true if the input is a ramp number, false if it is not
 
 
+//check 3434
 
 
 function rampNumber(number){
 
-  var numString = number.toString();
   var output;
-  for(var i=0; i<numString.length; i++){
-    var difference = numString.charAt(i+1) - numString.charAt(i);
-    if(difference === 1 || difference === -1) {
+
+  for(var i=0; i<number.length - 1; i++){
+    var difference = number.charAt(i+1) - number.charAt(i);
+      if(difference == 1 || difference == -1) {
       output = true;
     }else{
-      output = false;
+      return false;
     }
   };
   return output;
+
 } //end function
 
-
-var integer1 = 1234;
-var integer2 = 4321;
-var integer3 = 1111;
-console.log(rampNumber(integer1));
-console.log(rampNumber(integer2));
-console.log(rampNumber(integer3));
+var integer = prompt('Enter a number');
+console.log(rampNumber(integer));
