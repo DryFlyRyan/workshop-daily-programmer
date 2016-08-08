@@ -7,31 +7,56 @@
 // ## Output
 // true if the input is a ramp number, false if it is not
 
+//turn input into an array of numbers.
+//loop through numbers in array to see if + or - 1
+//if +1 or -1 push to number list
+//else empty number list
+//boolean on number list to determine if it has numbers or not - no then return false.
 
-//1. turn input into an array of numbers.
-//2. loop through numbers in array to see if + or - 1
-//3. if +1 or -1 push to number list
-//4. else empty number list
-//5. boolean on number list to determine if it has numbers or not - no then return false.
+
+//1: Check that there are more than 1 items
+//2: Check that the 2nd item is ramping up or down, set expectedOutcome based on that
+//3: Loop through all items
+//4: Check to see if current - next item matches expectedOutcome
+//5: If not, return false. If yes, keep looping.
+
+// Test Case 1: 12345
+// Test Case 2: 12343
+// Test Case 3: 54321
+// Test Case 4: 54323
+// Test Case 5: 1
+// Test Case 6: 11
+// Test Case 7: 16
+// Test Case 8: 12
+// Test Case 9: 21
 
 console.log('Ramped Numbers');
 var userNumber = window.prompt('Enter Number','enter 3 + digit number here..');
 
 function rampNumber(input){
-  var numberList;
-  var splitNumbers = userNumber.split('');
-  console.log(splitNumbers);
+  var i;
+  var expectedOutcome;
+  var isRamped = false;
+  var splitNumbers = input.split('');
+  var numbers = splitNumbers.map(Number);
 
-  var mappedInput = splitNumbers.map(Number);
-  console.log(mappedInput);
+  if (numbers.length > 1){
+    if (numbers[1] - numbers[0] === -1){
+      expectedOutcome = -1;
+    } else if (numbers[1] - numbers[0] === 1){
+      expectedOutcome = 1;
+    }
 
-for (i=0; i<mappedInput.length; i++){
-  if ((a-b) === -1 || a-b === 1){
-    numberList.push()
-    console.log(numberList);
+    for (i = 0; i < numbers.length; i++){
+      if (numbers[i + 1] && (numbers[i + 1] - numbers[i] === expectedOutcome)){
+        isRamped = true;
+      } else if (numbers[i + 1] && numbers[i + 1] - numbers[i] !== expectedOutcome){
+        isRamped = false;
+        break;
+      }
+    }
   }
-}
 
+  return isRamped;
 }
-
-console.log(rampNumber(1234));
+console.log(rampNumber(userNumber));
