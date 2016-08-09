@@ -20,7 +20,6 @@ console.log('Up Down Project');
 var numbers = window.prompt('Enter in some Numbers!', 'enter them here...');
 
 function upDown(input){
-  var output = '';
   var upDownArray = [];
 
   var cleanNumbers = input.replace(/\D/g, '');
@@ -34,17 +33,13 @@ function upDown(input){
 
   for (i=0; i<numberArray.length; i++){
     if (numberArray[i] === numberArray[i-1]){
-      output = 'even';
-      upDownArray.push(output);
+      upDownArray.push('even');
     } else if (numberArray[i] < numberArray[i-1]){
-      output = 'down';
-      upDownArray.push(output);
+      upDownArray.push('down');
     } else if (numberArray[i] > numberArray[i-1]){
-      output = 'up';
-      upDownArray.push(output);
+      upDownArray.push('up');
     }
   }
   return upDownArray;
 }
-
 console.log(upDown(numbers));
