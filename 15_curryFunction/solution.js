@@ -1,6 +1,6 @@
-function add(number){
-  return function callback(numberTwo){
-    return number+numberTwo;
+function add(number) {
+  return function (number2) {
+    return number + number2;
   }
 }
 
